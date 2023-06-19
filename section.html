@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<!-- Заголовок страницы в браузере -->
+		<title>ZEREK</title>
+		<!-- Иконка страницы в браузере -->
+		<link rel="icon" href="./assets/img/logo.icon.png" type="image/x-icon">
+		<!-- Подключаем CSS -->
+		<link rel="stylesheet" href="css/style.css" />
+		<!-- Animate CSS -->
+		<link rel="stylesheet" href="css/animate.css">
+		<!-- Font Awesome -->
+		<script src="https://kit.fontawesome.com/74ee379e24.js"
+			crossorigin="anonymous"></script>
+		<!-- Swiper -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+		<!-- Кодировка страницы -->
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<!-- Отображаемое тело страницы -->
+	<body>
+		<div class="section__header" id="main">
+			<div class="section__header__content _container">
+				<div class="nav-menu">
+					<!--// Menu container -->
+					<div class="hamburger-menu-body">
+						<div class="nav-menu__logoMobile">
+							<img src="assets/logo.png" alt />
+						</div>
+						<div
+							class="hamburger-menu">
+							<div class="bar-top"></div>
+							<div class="bar-middle"></div>
+							<div class="bar-bottom"></div>
+						</div>
+					</div>
+					<div
+						id="menu_content"
+						class="nav-content closed-menu">
+						<!--// Menu content-->
+						<div class="nav-menu__logoDesktop">
+							<img src="assets/logo.png" alt />
+						</div>
+
+						<ul class="nav-items">
+							<li class="nav-items-link">
+								<a href="index.html" data-i18n="nav__title__1"></a>
+							</li>
+
+							<li class="nav-items-link">
+								<a href="index.html" data-i18n="nav__title__2"></a>
+							</li>
+
+							<li class="nav-items-link">
+								<a href="index.html" data-i18n="nav__title__3"></a>
+							</li>
+						</ul>
+
+						<div class="nav-content-localization">
+							<button id="language-toggle" data-language="kz">Қазақша</button>
+							<div class="nav-content-localization-city">
+								<svg width="16" height="21"
+									viewBox="0 0 16 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M8 2C10.2 2 12 3.8 12 6C12 8.1 9.9 11.5 8 13.9C6.1 11.4 4 8.1 4 6C4 3.8 5.8 2 8 2ZM8 0C4.7 0 2 2.7 2 6C2 10.5 8 17 8 17C8 17 14 10.4 14 6C14 2.7 11.3 0 8 0ZM8 4C6.9 4 6 4.9 6 6C6 7.1 6.9 8 8 8C9.1 8 10 7.1 10 6C10 4.9 9.1 4 8 4ZM16 17C16 19.2 12.4 21 8 21C3.6 21 0 19.2 0 17C0 15.7 1.2 14.6 3.1 13.8L3.7 14.7C2.7 15.2 2 15.8 2 16.5C2 17.9 4.7 19 8 19C11.3 19 14 17.9 14 16.5C14 15.8 13.3 15.2 12.2 14.7L12.8 13.8C14.8 14.6 16 15.7 16 17Z"
+										fill="#2176FF" />
+								</svg>
+								<span id="current__city"></span>
+							</div>
+
+						</div>
+						<div class="nav-content-entrance">
+							<a class="nav-content-entrance-center" href="center.html"
+								data-i18n="for__center"></a>
+							<a href="https://portal.zerek.edus.kz/#/login" class="login-button"
+								data-i18n="enterence"></a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="section__hobbies wow zoomIn">
+			<div class="section__hobbies__content _container">
+				<div class="section__hobbies__title section__title"
+					data-i18n="hobbies__title">
+
+				</div>
+
+				<div class="section__hobbies__filter">
+					<div class="section__hobbies__filter__item">
+						<label class="section__hobbies__filter__item__label"
+							data-i18n="hobbies__filter__price"></label>
+						<select id="price-select"
+							class="section__hobbies__filter__item__select select__option">
+							<option value="all" data-i18n="hobbies__all"></option>
+							<option value="free" data-i18n="hobbies__filter__price__free"></option>
+							<option value="paid" data-i18n="hobbies__filter__price__paid"></option>
+						</select>
+					</div>
+
+					<div class="section__hobbies__filter__item">
+						<label class="section__hobbies__filter__item__label"
+							data-i18n="hobbies__filter__category"></label>
+						<select id="filter-select"
+							class="section__hobbies__filter__item__select select__option">
+							<option value="all" data-i18n="hobbies__all"></option>
+
+						</select>
+					</div>
+				</div>
+
+				<div class="section__row" id="data-container"></div>
+				<div id="pagination-container"></div>
+
+			</div>
+		</div>
+
+		<footer class="section__footer" id="footer">
+			<div class="section__footer__content _container">
+				<div class="section__row">
+					<div class="section__footer__item">
+						<img src="assets/logo.png" alt />
+						<div class="section__footer__item__paragraph"
+							data-i18n="footer__paragraph">
+						</div>
+						<div class="section__footer__item__social">
+							<a href="https://ru-ru.facebook.com/">
+								<svg
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M4 12C4.00014 10.4605 4.44451 8.95364 5.27979 7.66038C6.11506 6.36712 7.30576 5.34234 8.70901 4.70901C10.1123 4.07568 11.6684 3.8607 13.1908 4.08987C14.7132 4.31904 16.1372 4.98262 17.2918 6.00099C18.4464 7.01936 19.2826 8.34926 19.7002 9.83111C20.1177 11.313 20.0988 12.8838 19.6457 14.3552C19.1926 15.8265 18.3246 17.1359 17.1458 18.1262C15.967 19.1165 14.5275 19.7456 13 19.938V14H15C15.2652 14 15.5196 13.8946 15.7071 13.7071C15.8946 13.5196 16 13.2652 16 13C16 12.7348 15.8946 12.4804 15.7071 12.2929C15.5196 12.1054 15.2652 12 15 12H13V10C13 9.73478 13.1054 9.48043 13.2929 9.29289C13.4804 9.10536 13.7348 9 14 9H14.5C14.7652 9 15.0196 8.89464 15.2071 8.70711C15.3946 8.51957 15.5 8.26522 15.5 8C15.5 7.73478 15.3946 7.48043 15.2071 7.29289C15.0196 7.10536 14.7652 7 14.5 7H14C13.2044 7 12.4413 7.31607 11.8787 7.87868C11.3161 8.44129 11 9.20435 11 10V12H9C8.73478 12 8.48043 12.1054 8.29289 12.2929C8.10536 12.4804 8 12.7348 8 13C8 13.2652 8.10536 13.5196 8.29289 13.7071C8.48043 13.8946 8.73478 14 9 14H11V19.938C9.0667 19.6942 7.28882 18.7533 6 17.2917C4.71119 15.8302 4.00003 13.9486 4 12ZM12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22Z"
+										fill="#2176FF" />
+								</svg>
+							</a>
+							<a href="https://www.instagram.com">
+								<svg
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M7.8 2H16.2C19.4 2 22 4.6 22 7.8V16.2C22 17.7383 21.3889 19.2135 20.3012 20.3012C19.2135 21.3889 17.7383 22 16.2 22H7.8C4.6 22 2 19.4 2 16.2V7.8C2 6.26174 2.61107 4.78649 3.69878 3.69878C4.78649 2.61107 6.26174 2 7.8 2ZM7.6 4C6.64522 4 5.72955 4.37928 5.05442 5.05442C4.37928 5.72955 4 6.64522 4 7.6V16.4C4 18.39 5.61 20 7.6 20H16.4C17.3548 20 18.2705 19.6207 18.9456 18.9456C19.6207 18.2705 20 17.3548 20 16.4V7.6C20 5.61 18.39 4 16.4 4H7.6ZM17.25 5.5C17.5815 5.5 17.8995 5.6317 18.1339 5.86612C18.3683 6.10054 18.5 6.41848 18.5 6.75C18.5 7.08152 18.3683 7.39946 18.1339 7.63388C17.8995 7.8683 17.5815 8 17.25 8C16.9185 8 16.6005 7.8683 16.3661 7.63388C16.1317 7.39946 16 7.08152 16 6.75C16 6.41848 16.1317 6.10054 16.3661 5.86612C16.6005 5.6317 16.9185 5.5 17.25 5.5ZM12 7C13.3261 7 14.5979 7.52678 15.5355 8.46447C16.4732 9.40215 17 10.6739 17 12C17 13.3261 16.4732 14.5979 15.5355 15.5355C14.5979 16.4732 13.3261 17 12 17C10.6739 17 9.40215 16.4732 8.46447 15.5355C7.52678 14.5979 7 13.3261 7 12C7 10.6739 7.52678 9.40215 8.46447 8.46447C9.40215 7.52678 10.6739 7 12 7ZM12 9C11.2044 9 10.4413 9.31607 9.87868 9.87868C9.31607 10.4413 9 11.2044 9 12C9 12.7956 9.31607 13.5587 9.87868 14.1213C10.4413 14.6839 11.2044 15 12 15C12.7956 15 13.5587 14.6839 14.1213 14.1213C14.6839 13.5587 15 12.7956 15 12C15 11.2044 14.6839 10.4413 14.1213 9.87868C13.5587 9.31607 12.7956 9 12 9Z"
+										fill="#2176FF" />
+								</svg>
+							</a>
+							<a href="https://www.youtube.com/">
+								<svg
+									width="22"
+									height="16"
+									viewBox="0 0 22 16"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M9.29105 4.14206C9.17055 4.06973 9.03301 4.03067 8.89248 4.02887C8.75195 4.02708 8.61347 4.06261 8.49116 4.13184C8.36885 4.20106 8.2671 4.30151 8.19631 4.42292C8.12552 4.54433 8.08821 4.68235 8.0882 4.82289V11.1759C8.08821 11.3164 8.12552 11.4545 8.19631 11.5759C8.2671 11.6973 8.36885 11.7977 8.49116 11.867C8.61347 11.9362 8.75195 11.9717 8.89248 11.9699C9.03301 11.9681 9.17055 11.9291 9.29105 11.8567L14.5853 8.68023C14.7028 8.60966 14.8001 8.50987 14.8676 8.39056C14.9351 8.27125 14.9706 8.13649 14.9706 7.9994C14.9706 7.86231 14.9351 7.72755 14.8676 7.60824C14.8001 7.48893 14.7028 7.38914 14.5853 7.31857L9.29105 4.14206ZM12.6328 7.9994L9.67647 9.77295V6.22585L12.6328 7.9994Z"
+										fill="#2176FF" />
+									<path
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M16.326 0.207502C12.7808 -0.0698185 9.21929 -0.0698185 5.67405 0.207502L3.30119 0.393858C2.60006 0.448511 1.93738 0.73621 1.41871 1.21113C0.900036 1.68605 0.555203 2.32087 0.439136 3.01448C-0.112362 6.31493 -0.112362 9.68402 0.439136 12.9845C0.555203 13.6781 0.900036 14.3129 1.41871 14.7878C1.93738 15.2627 2.60006 15.5504 3.30119 15.6051L5.67299 15.7915C9.21906 16.0689 12.781 16.0689 16.3271 15.7915L18.6989 15.6051C19.4 15.5504 20.0627 15.2627 20.5814 14.7878C21.1 14.3129 21.4449 13.6781 21.5609 12.9845C22.1115 9.68409 22.1115 6.31487 21.5609 3.01448C21.4449 2.32087 21.1 1.68605 20.5814 1.21113C20.0627 0.73621 19.4 0.448511 18.6989 0.393858L16.326 0.207502ZM5.79794 1.79152C9.26141 1.52054 12.7408 1.52054 16.2042 1.79152L18.576 1.97682C19.2918 2.03294 19.8774 2.56977 19.9949 3.27707C20.5173 6.40367 20.5173 9.59528 19.9949 12.7219C19.9376 13.0659 19.7667 13.3809 19.5095 13.6165C19.2524 13.8522 18.9238 13.995 18.576 14.0221L16.2042 14.2074C12.7408 14.4785 9.26141 14.4785 5.79794 14.2074L3.42613 14.0221C3.0784 13.995 2.74978 13.8522 2.49263 13.6165C2.23549 13.3809 2.06463 13.0659 2.00728 12.7219C1.48493 9.59528 1.48493 6.40367 2.00728 3.27707C2.06463 2.93303 2.23549 2.61808 2.49263 2.38244C2.74978 2.14679 3.0784 2.00399 3.42613 1.97682L5.79794 1.79152Z"
+										fill="#2176FF" />
+								</svg>
+							</a>
+						</div>
+					</div>
+
+					<div class="section__footer__item">
+						<div class="section__footer__item__title" data-i18n="nav__header"></div>
+
+						<a
+							href="https://support.edus.kz/public/ru/v1"
+							class="section__footer__item__link">
+							<div class="section__footer__item__paragraph__icon">
+								<svg
+									width="20"
+									height="16"
+									viewBox="0 0 20 16"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M1 3C1 2.46957 1.21071 1.96086 1.58579 1.58579C1.96086 1.21071 2.46957 1 3 1H17C17.5304 1 18.0391 1.21071 18.4142 1.58579C18.7893 1.96086 19 2.46957 19 3V13C19 13.5304 18.7893 14.0391 18.4142 14.4142C18.0391 14.7893 17.5304 15 17 15H3C2.46957 15 1.96086 14.7893 1.58579 14.4142C1.21071 14.0391 1 13.5304 1 13V3Z"
+										stroke="#2176FF"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round" />
+									<path
+										d="M1 3L10 9L19 3"
+										stroke="#2176FF"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round" />
+								</svg>
+							</div>
+							<div class="section__footer__item__paragraph">support.edus.kz</div>
+						</a>
+
+						<a href="tel:87070304050" class="section__footer__item__link">
+							<div class="section__footer__item__paragraph__icon">
+								<svg
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M16.5233 12.6439L16.5232 12.644L16.5342 12.6491L16.5354 12.6496L20.9468 14.6264C20.9472 14.6266 20.9477 14.6268 20.9482 14.627C21.2938 14.7774 21.5816 15.0353 21.7688 15.3625C21.9562 15.6901 22.0328 16.0695 21.9869 16.4442L21.9866 16.4464C21.8115 17.777 21.1581 18.9983 20.1483 19.8823C19.1386 20.7663 17.8416 21.2525 16.4996 21.2501M16.5233 12.6439L7.58626 2.2613C6.31592 2.42847 5.14986 3.05234 4.30588 4.01639C3.4619 4.98045 2.99771 6.21876 3.00001 7.50005H2.75001C2.75001 7.50013 2.75001 7.5002 2.75001 7.50028C2.75013 15.0818 8.91802 21.2498 16.4996 21.2501M16.5233 12.6439L16.5168 12.6411C16.2493 12.5267 15.9575 12.4808 15.6678 12.5075C15.3784 12.5342 15.1003 12.6326 14.8585 12.7936C14.826 12.8151 14.7948 12.8384 14.7651 12.8634L14.7638 12.8645L12.6082 14.7021C11.3066 14.0229 9.98151 12.7078 9.30182 11.4237L16.5233 12.6439ZM16.4996 21.2501L16.5 21.0001V21.2501C16.4999 21.2501 16.4997 21.2501 16.4996 21.2501ZM16.5009 19.2501L16.5003 19.2501C13.385 19.2467 10.3982 18.0076 8.19534 15.8047C5.99247 13.6019 4.75341 10.6151 4.75001 7.49978L4.75001 7.49909C4.74671 6.64434 5.05466 5.81762 5.61633 5.17331C6.13625 4.5769 6.84066 4.17455 7.61448 4.02814L9.4459 8.12704L7.60956 10.325C7.58255 10.3562 7.55794 10.3895 7.53592 10.4245C7.37206 10.6766 7.27593 10.9667 7.25681 11.2668C7.23765 11.5677 7.29653 11.8684 7.42774 12.1398L7.42823 12.1408C8.30243 13.9288 10.0938 15.7063 11.8997 16.5789L11.9011 16.5796C12.1745 16.7096 12.4769 16.7664 12.7789 16.7446C13.0808 16.7227 13.3719 16.6229 13.6238 16.4549L13.6247 16.4543C13.6564 16.4329 13.6868 16.4099 13.716 16.3852L13.7166 16.3846L15.8755 14.5428L19.9724 16.3777C19.8273 17.1531 19.4254 17.8594 18.8286 18.3809C18.1841 18.9439 17.3566 19.2529 16.5009 19.2501Z"
+										fill="#2176FF"
+										stroke="#2176FF"
+										stroke-width="0.1" />
+								</svg>
+							</div>
+							<div class="section__footer__item__paragraph">+7 707 030 4050</div>
+						</a>
+
+						<a href class="section__footer__item__link">
+							<div class="section__footer__item__paragraph__icon">
+								<svg
+									width="20"
+									height="20"
+									viewBox="0 0 20 20"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M1 10C1 11.1819 1.23279 12.3522 1.68508 13.4442C2.13738 14.5361 2.80031 15.5282 3.63604 16.364C4.47177 17.1997 5.46392 17.8626 6.55585 18.3149C7.64778 18.7672 8.8181 19 10 19C11.1819 19 12.3522 18.7672 13.4442 18.3149C14.5361 17.8626 15.5282 17.1997 16.364 16.364C17.1997 15.5282 17.8626 14.5361 18.3149 13.4442C18.7672 12.3522 19 11.1819 19 10C19 7.61305 18.0518 5.32387 16.364 3.63604C14.6761 1.94821 12.3869 1 10 1C7.61305 1 5.32387 1.94821 3.63604 3.63604C1.94821 5.32387 1 7.61305 1 10Z"
+										stroke="#2176FF"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round" />
+									<path
+										d="M10 5V10L13 13"
+										stroke="#2176FF"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round" />
+								</svg>
+							</div>
+							<div class="section__footer__item__paragraph">09:00 - 18:00</div>
+						</a>
+					</div>
+
+					<nav class="section__footer__item">
+						<div class="section__footer__item__title" data-i18n="nav__header__2"></div>
+
+						<div
+							class="section__footer__item__paragraph quick__link">
+							<a href="#main" data-i18n="nav__header__link__1">
+
+							</a>
+						</div>
+						<div
+							class="section__footer__item__paragraph quick__link">
+							<a href="index.html" onclick="window.location.href = 'index.html';"
+								data-i18n="nav__header__link__2">
+							</a>
+						</div>
+						<div
+							class="section__footer__item__paragraph quick__link">
+							<a href="center.html" onclick="window.location.href = 'center.html';"
+								data-i18n="nav__header__link__3">
+							</a>
+
+						</div>
+					</nav>
+				</div>
+			</div>
+		</footer>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/i18next/22.4.15/i18next.min.js"
+			integrity="sha512-fDt50cr//jIKim9lb8ly/E4obyrGx7hIK0irvSAg0X7awULsliT1Q8GYVqkfeovyWX3arQoLn6MOmjNKqD8MZA=="
+			crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="js/i18n.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/get-data.js"></script>
+		<script src="js/wow.min.js"></script>
+		<script>
+            var wow = new WOW;
+            wow.init(); 
+        </script>
+
+	</body>
+</html>
